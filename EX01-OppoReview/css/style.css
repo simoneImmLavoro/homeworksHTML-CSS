@@ -57,7 +57,7 @@ body{
 
 .hero{
     height: 80vh;
-    background-color: #CCC9CC;
+    background-color: #e2e2e2;
     background-image: url("../assets/banner.jpg");
     background-position: center;
     background-repeat: no-repeat;
@@ -73,6 +73,9 @@ body{
     line-height: 1.3;
     font-family: 'Lora', serif;
     font-weight: 500;
+    background-color: #e4e4e45b;
+    padding: 1rem;
+    border-radius: 0.8rem;
 }
 
 .subtitle{
@@ -157,6 +160,9 @@ img{
 
 .sommario, .scheda{
     margin: 0 1rem;
+    background-color: #e4e4e463;
+    border-radius: 0.5rem;
+    padding: 0.8rem;
 }
 
 .scheda-title, .sommario-title{
