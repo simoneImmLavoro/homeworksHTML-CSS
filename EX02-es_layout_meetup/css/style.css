@@ -70,10 +70,9 @@ button{
 
 .hero{
     background-color: #036BC7;
-    color: #f8f8f8;
-    height: 75vh;
+    color: #f8f8f8;    
     text-align: center;
-    padding-top: 4rem;
+    padding: 4rem 0 7rem;
     line-height: 1.2;
     margin-top: -1px;
 }
@@ -155,5 +154,18 @@ button{
 
 .action-p{
     font-size: 1.3rem;
-    margin-top: 0.5rem;
+    margin-top: 0.7rem;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                main speakers                               */
+/* -------------------------------------------------------------------------- */
+
+
+.main-speakers{
+    margin-top: 8rem;
+}
+
+.speakers-title{
+    
 }
