@@ -837,7 +837,9 @@ footer{
 }
 
 
-@media screen and(min-width: 1250px){
+/* per sistemare la label inline nel form*/
+
+/* @media screen and(min-width:1250px){
     
     .main-form label, .main-form input, .main-form textarea{
         display: inline;
@@ -856,4 +858,4 @@ footer{
         margin-top: 0.8rem;
     }
 
-}
+} */
