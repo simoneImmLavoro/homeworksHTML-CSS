@@ -803,7 +803,7 @@ footer{
     }
 
     .main-reviews{
-        width: 45%;
+        width: 35%;
     }
 
     .review{
@@ -830,10 +830,10 @@ footer{
 
 
 /* -------------------------------------------------------------------------- */
-/*            per sistemare la label inline nel form  media 1250px            */
+/*            per sistemare la label inline nel form  media 1450px            */
 /* -------------------------------------------------------------------------- */
 
-@media screen and (min-width:1200px){
+@media screen and (min-width:1450px){
 
     .inliner{
         display: flex;
