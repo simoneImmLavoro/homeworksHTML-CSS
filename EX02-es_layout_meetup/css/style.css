@@ -52,7 +52,7 @@ a{
 
 #header{
     background-color: #036BC7;
-    padding: 1rem 1.5rem 6vh 1.5rem;
+    padding: 1rem 1.5rem 6vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -473,5 +473,338 @@ footer{
 
 
 /* -------------------------------------------------------------------------- */
-/*                                550px --- 992                               */
+/*                                media query min 650px                              */
 /* -------------------------------------------------------------------------- */
+
+
+@media screen and (min-width:650px) {
+
+    .container{
+        width: 90%;
+    }
+
+    /*header*/
+
+    #header{
+        padding: 1rem 2rem 6vh;
+    }
+
+    .header-nav i{
+        display: none;
+    }
+
+    .mobile-nav{
+        display: none;
+    }
+
+    .desktop-nav{
+        display: block;
+    }
+
+    .desktop-nav .main-nav{
+        display: flex;
+        gap: 2rem;
+    }
+
+    .desktop-nav .main-nav li{
+        list-style: none;
+    }
+
+    .desktop-nav .main-nav a{
+        color: #FCD93B;
+    }
+
+    .desktop-nav .main-nav a:hover{
+        border-bottom: 1px solid #FCD93B;
+    }
+
+    /*hero*/
+
+    .hero{
+        padding: 3.5rem 0;
+    }
+
+    .hero .container{
+        position: relative;
+    }
+
+    .hero-img{
+        width: 45%;
+        display: block;
+        position: absolute;
+        top: 10%;
+        left: 55%;
+    }
+
+    .hero .text-content{
+        width: 90%;
+        text-align: left;
+    }
+
+    .hero-title{
+        font-size: 2rem;
+    }
+
+    .btn-hero{
+        width: 40%;
+        margin: 5rem 0;
+        font-size: 0.8rem;
+    }
+
+    /*main*/
+
+    /* actions */
+
+    .actions{
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .action{
+        width: calc((33.3333% - 0.5rem) + (0.5rem / 3));
+    }
+
+    .action-img i{
+        font-size: 5rem;
+    }
+
+    .action-title{
+        font-size: 1.5rem;
+    }
+
+    .action-p{
+        font-size: 1.1rem;
+    }
+
+    /*speakers*/
+
+    .main-speakers{
+        margin: 4rem 0 2.5rem;
+    }
+
+    .speakers-cards{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem
+    }
+
+    .speaker-card{
+        width: calc((50% - 0.8rem) + ( 0.8rem / 2));
+    }
+
+    /*cta*/
+
+    .cta{
+        padding: 2rem 0;
+        gap: 1.6rem;
+    }
+
+    .cta-title{
+        font-size: 2rem;
+    }
+
+    .cta-options{
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .cta-option{
+        width: calc((50% - 1.6rem) + (1.6rem /2));
+        justify-content: space-between;
+    }
+
+    .cta-option-btn{
+        width: 95%;
+    }
+
+    /*form & reviews*/
+
+    .form-container{
+        width: 60%;
+    }
+
+    .main-reviews{
+        padding: 2rem 0 1.5rem;
+    }
+
+    /*footer*/
+
+    footer{
+        gap: 1.8rem;
+        padding: 2.8rem 2rem;
+    }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                            media query min 900px                           */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width:900px){
+
+    .container{
+        width: 85%;
+    }
+
+    /*header*/
+
+    #header{
+        padding: 1rem 3.5rem 6vh;
+    }
+
+    .desktop-nav .main-nav{
+        gap: 3rem;
+        font-size: 1.2rem;
+    }
+
+    /*hero*/
+
+    .hero .container{
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+    }
+
+    .hero .text-content{
+        width: 45%;
+    }
+
+    .hero-title{
+        font-size: 2.4rem;
+    }
+
+    .hero-img{
+        position: static;
+        width: 40%;
+    }
+
+    .btn-hero{
+        font-size: 1rem;
+    }
+
+    /*main*/
+
+    .main{
+        padding: 2.5rem 0;
+    }
+
+    .main-title{
+        font-size: 2.5rem;
+    }
+
+    .main-actions .main-title{
+        font-size: 3rem;
+    }
+
+    /* actions */
+
+    .actions{
+        margin-top: 3rem;
+        gap: 2rem;
+    }
+
+    .action{
+        width: calc((33.3333% - 2rem) + (2rem / 3));
+    }
+
+    .action-title{
+        font-size: 2rem;
+    }
+
+    .action-p{
+        font-size: 1.4rem;
+        line-height: 1.4;
+    }
+
+    /*speakers*/
+
+    .speakers-title{
+        font-size: 2.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .speakers-cards{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.4rem
+    }
+
+    .speaker-card{
+        width: calc((33.333% - 1.4rem) + ( 1.4rem / 3));
+    }
+
+    .speaker-card:hover{
+        box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.02),
+          0px 5px 4px rgba(3, 7, 18, 0.03),
+          0px 12px 9px rgba(3, 7, 18, 0.05),
+          0px 20px 15px rgba(3, 7, 18, 0.06),
+          0px 32px 24px rgba(3, 7, 18, 0.08);
+        transform: scale(1.05);
+        transition: 0.2s linear;
+    }
+
+
+    /*cta*/
+
+    .cta{
+        padding: 3rem 0 4.5rem;
+    }
+
+    .cta-title{
+        font-size: 2.2rem;
+    }
+
+    .cta-options{
+        width: 80%;
+        gap: 0;
+        justify-content: space-evenly;
+    }
+
+    .cta-option{
+        width: 30%;
+    }
+
+    .cta-option-btn{
+        width: 70%;
+    }
+
+    /*form & reviews*/
+
+    .main-form{
+        background-color: #3A3A3A;
+        padding: 2.5rem 0;
+    }
+
+    .form-container{
+        width: 85%;
+    }
+
+    .form-rewiew-container{
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    }
+
+    .main-form-title{
+        font-size: 2rem;
+    }
+
+    .main-form form{
+        width: 40%;
+    }
+
+    .main-reviews{
+        width: 35%;
+    }
+
+    .review{
+        font-size: 1rem;
+    }
+
+    /*footer*/
+
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
