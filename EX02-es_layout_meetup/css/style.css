@@ -258,10 +258,6 @@ a{
 }
 
 
-.speaker-img:hover{
-    animation: rotateFace 2s infinite; 
-}
-
 .speaker-img img{
     box-shadow: 0 0 0 4px #EFEFEF;
     border-radius: 100%;
@@ -657,6 +653,24 @@ footer{
 
 @media screen and (min-width:900px){
 
+    .btn-hero:hover, .cta-option-btn:hover{
+        transform: scale(1.05);
+        background-color: #ea5035;
+    }
+
+    .btn-hero:active, .cta-option-btn:active{
+        background-color: #b73f2a;
+    }
+
+    .form-button:hover{
+        transform: scale(1.05);
+        background-color: #f3d550;
+    }
+
+    .form-button:active{
+        background-color: #e1c02d;
+    }
+
     .container{
         width: 85%;
     }
@@ -758,6 +772,10 @@ footer{
         transition: 0.2s linear;
     }
 
+    
+    .speaker-img:hover{
+        animation: rotateFace 2s infinite; 
+    }
 
     /*cta*/
 
