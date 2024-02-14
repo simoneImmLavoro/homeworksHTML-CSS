@@ -16,3 +16,12 @@ mobileMenuLinks.forEach(link => {
         mobileMenu.style.right = "-70%";
     })
 })
+
+// var widthPercent = ($('.one'). width() / $(window). width())*100;
+
+let menuWidth = (mobileMenu.offsetWidth /window.innerWidth)*100
+
+console.log(mobileMenu.offsetWidth);
+console.log(window.innerWidth);
+
+console.log(menuWidth);
