@@ -1,0 +1,7 @@
+.disk{
+    fill: #000;
+}
+
+html[data-bs-theme="dark"] .disk{
+    fill: #fff;
+}
