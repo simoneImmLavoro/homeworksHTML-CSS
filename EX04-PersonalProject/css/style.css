@@ -1,0 +1,144 @@
+/* -------------------------------------------------------------------------- */
+/*                                   general                                  */
+/* -------------------------------------------------------------------------- */
+
+body {
+    background-color: #727272;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+}
+
+.bg-white{
+    background-color: #f8f8f8;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   header                                   */
+/* -------------------------------------------------------------------------- */
+
+header {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+:root {
+    --opacity-header-box: 0.5;
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3rem;
+    height: 10vh;
+    padding: 0.6rem 0;
+    color: #242424;
+    opacity: 0;
+    transition: 1.5s;
+    transition: 0.6s;
+}
+
+.company-name {
+    font-size: 2rem;
+}
+
+.logo {
+    width: 3.5rem;
+    height: 100%;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.header-nav-icon,
+.mobile-nav {
+    display: none;
+}
+
+.desktop-nav .main-nav {
+    display: flex;
+}
+
+.desktop-nav .main-nav a {
+    color: #242424;
+    margin-left: 0.8rem;
+}
+
+.desktop-nav .main-nav a:hover {
+    border-bottom: 1px solid #000;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    hero                                    */
+/* -------------------------------------------------------------------------- */
+
+#hero {
+    background-image: url("../assets/marita-kavelashvili-ugnrXk1129g-unsplash.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    transition: 1s;
+}
+
+.hero-titles {
+    width: 80%;
+    text-align: center;
+    font-size: 4rem;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.main-title {
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.undertitle {
+    font-size: 2.3rem;
+    opacity: 0;
+    transition: 1.5s;
+}
+
+.down-arrow {
+    width: 10rem;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 1.5s;
+    cursor: pointer;
+}
+
+.down-arrow:hover {
+    transform: translateX(-50%) scale(1.15);
+    opacity: 0.4;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  info area                                 */
+/* -------------------------------------------------------------------------- */
+
+#information-area{
+    height: 100vh;
+    padding-top: 10vh;
+}

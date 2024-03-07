@@ -1,0 +1,11 @@
+{
+    "plants" : [
+        {
+            "nome" : "",
+            "family": "",
+            "img": "",
+            "prezzo": "",
+            "shortDescr": ""
+        }
+    ]
+}
