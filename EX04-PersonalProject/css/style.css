@@ -29,7 +29,7 @@ a {
 /*                                   header                                   */
 /* -------------------------------------------------------------------------- */
 
-header {
+#header {
     width: 100%;
     height: 10vh;
     position: fixed;
@@ -37,9 +37,6 @@ header {
     transition: 0.5s;
 }
 
-:root {
-    --opacity-header-box: 0.5;
-}
 
 .header-box {
     display: flex;
@@ -52,6 +49,7 @@ header {
     opacity: 0;
     transition: 1.5s;
     transition: 0.6s;
+    position: relative;
 }
 
 .company-name {
@@ -65,22 +63,70 @@ header {
     transition: 0.4s;
 }
 
-.header-nav-icon,
-.mobile-nav {
-    display: none;
-}
 
-.desktop-nav .main-nav {
-    display: flex;
-}
-
-.desktop-nav .main-nav a {
+.mobile-nav .main-nav a {
     color: #242424;
     margin-left: 0.8rem;
+    text-align: center;
 }
 
-.desktop-nav .main-nav a:hover {
+.mobile-nav .main-nav a:hover {
     border-bottom: 1px solid #000;
+}
+
+.burger-icon i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              side menu mobile                              */
+/* -------------------------------------------------------------------------- */
+
+.mobile-nav{
+    width: 70%;
+    height: 100vh;
+    background-color: #7b9464;
+    position: fixed;
+    top: 0;
+    right: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+    transition: 1s ease-out;
+}
+
+.mobile-nav .main-nav{
+    list-style: none;
+    text-align: right;
+    font-size: 2rem;
+}
+
+.mobile-nav .main-nav li{
+    margin: 1.2rem 0;
+}
+
+.mobile-nav .main-nav li a{
+    color: #404142;
+}
+
+.mobile-nav i{
+    position: absolute;
+    top: 4%;
+    right: 8%;
+    font-size: 2rem;
+    color: #404142;
+    cursor: pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                desktop menu                                */
+/* -------------------------------------------------------------------------- */
+
+.desktop-nav{
+    display: none;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -141,4 +187,57 @@ header {
 #information-area{
     height: 100vh;
     padding-top: 10vh;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                media query min 600px                              */
+/* -------------------------------------------------------------------------- */
+
+
+@media screen and (min-width:600px) {
+
+    .container{
+        width: 90%;
+    }
+
+    .header-nav-icon i{
+        display: none;
+    }
+
+    .mobile-nav{
+        display: none;
+    }
+
+    .desktop-nav{
+        display: block;
+    }
+
+    .desktop-nav .main-nav{
+        display: flex;
+    }
+
+    .desktop-nav .main-nav a {
+        color: #242424;
+        margin-left: 0.8rem;
+    }
+    
+    .desktop-nav .main-nav a:hover {
+        border-bottom: 1px solid #000;
+    }
+    
 }
