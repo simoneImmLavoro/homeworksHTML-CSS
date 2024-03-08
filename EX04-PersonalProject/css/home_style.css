@@ -37,7 +37,6 @@ a {
 
 #header {
     width: 100%;
-    height: 10vh;
     position: fixed;
     z-index: 2;
     transition: 0.5s;
@@ -164,6 +163,10 @@ a {
 .mobile-nav .circle-tag {
     top: 5%;
     left: 90%;
+}
+
+.active{
+    border-bottom: 1px solid #000;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -465,6 +468,14 @@ footer{
     display: flex;
     gap: 0.8rem;
     font-size: 1.3rem;
+}
+
+.social i{
+    cursor: pointer;
+}
+
+.social i:hover{
+    color: #1a1919;
 }
 
 /* -------------------------------------------------------------------------- */
