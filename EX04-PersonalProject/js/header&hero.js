@@ -8,13 +8,6 @@ let downArrow = document.querySelector(".down-arrow");
 let hero = document.querySelector("#hero");
 let logoImg = document.querySelector(".logo")
 
-function Plant(name, family, img, prezzo, shortDescr){
-    this.name = name;
-    this.family = family;
-    this.img = img;
-    this.prezzo = prezzo;
-    this.shortDescr = shortDescr
-}
 
 window.addEventListener("scroll", function () {
     if (window.scrollY >= window.innerHeight - 20) {
