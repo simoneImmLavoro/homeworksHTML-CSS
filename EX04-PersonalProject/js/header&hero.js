@@ -1,5 +1,6 @@
 let mainTitle = document.querySelector(".main-title");
 let underTitle = document.querySelector(".undertitle");
+let heroTitles = document.querySelector(".hero-titles");
 let header = document.querySelector("#header");
 let headerBox = document.querySelector(".header-box");
 let companyName = document.querySelector(".company-name");
@@ -57,3 +58,17 @@ downArrow.addEventListener("click", function () {
         behavior: 'smooth'});
 });
 
+
+let lastScrollTop = 0;
+
+window.addEventListener("scroll", function() {
+    let scrollTop = window.scrollTop || document.documentElement.scrollTop;
+
+    if (scrollTop > lastScrollTop) {
+        heroTitles.style.top = "47%";
+    } else {
+        heroTitles.style.top = "40%";
+    }
+
+    lastScrollTop = scrollTop;
+});

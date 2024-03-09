@@ -30,7 +30,7 @@
                     </div>
                     <div class="header-nav-icon">
                         <div class="cart-icon" id="cartDesk">
-                            <i class="bi bi-cart" id="myCart"></i>
+                            <i class="bi bi-cart cart-nav-mobile" id="myCart"></i>
                             <div class="circle-tag">
                                 <span class="content-counter"></span></div>
                         </div>
@@ -47,8 +47,8 @@
                             <li class="nav-link">
                                 <a href="./about.html">About</a>
                             </li>
-                            <li class="nav-link" id="cartDesk">
-                                <a href="#">Cart</a>
+                            <li class="nav-link cart-nav-desktop" id="cartDesk">
+                                <a class="active" href="#">Cart</a>
                                 <div class="circle-tag">
                                     <span class="content-counter"></span></div>
                             </li>
@@ -65,8 +65,8 @@
                                 <li class="nav-link">
                                     <a href="./about.html">About</a>
                                 </li>
-                                <li class="nav-link" id="cartDesk">
-                                    <a href="#">Cart</a>
+                                <li class="nav-link cart-nav-side" id="cartDesk">
+                                    <a class="active" href="#">Cart</a>
                                     <div class="circle-tag">
                                         <span class="content-counter"></span></div>
                                 </li>
@@ -77,29 +77,74 @@
             </div>
         </header>
         <main>
-            
-        </main>
-            <footer>
-                <div class="container">
-                    <div class="footer-box">
-                        <div class="footer-img">
-                            <img src="./assets/home_forest_v03.svg" alt="">
+            <section id="main-cart">
+                <div class="container recap-box">
+                    <div class="summary-area">
+                        <div class="cart-titles">
+                            <h1 class="main-title">Your green Cart</h1>
+                            <p class="undertitle">Modify the quantity of products as you like then finalize your shopping</p>
                         </div>
-                        <div class="social">
-                            <i class="bi bi-instagram"></i>
-                            <i class="bi bi-facebook"></i>
-                            <i class="bi bi-twitter"></i>
+                        <div class="items-list">
+                            <!-- generazione card dinamiche -->
                         </div>
-                        <div class="legal">
-                            <p class="iva">P.iva 34957100281</p>
-                            <p class="cookies">Cookies/Privacy</p>
+                    </div>
+                    <div class="final-payment">
+                        <div class="final-titles">
+                            <h2 class="final-title">Your information</h2>
+                        </div>
+                        <div class="final-recap">
+                            <p class="quantity-tag">Items: <span class="number-tag"></span></p>
+                            <p class="total-to-pay">Total: €<span class="total-price"></span></p>
+                        </div>
+                        <div class="final-form">
+                            <div id="form">
+                                <p class="final-undertitle">Please insert your shipping data</p>
+                                <input type="text" id="name" name="name" placeholder="Name">
+                                <input type="text" id="surname" name="surname" placeholder="Surname">
+                                <input type="text" id="address" name="address" placeholder="Address">
+                                <input type="text" id="postalCode" name="postalCode" placeholder="Postal Code">
+                                <input type="text" id="city" name="city" placeholder="City">
+                                <input type="email" id="email" name="email" placeholder="Email">
+                                <p class="final-undertitle">Please insert your payment data</p>
+                                <input type="text" id="cardNumber" name="cardNumber" placeholder="Card Number">
+                                <div class="date-code">
+                                    <input type="text" id="expirDate" name="expirDate" placeholder="MM/YY">
+                                    <input type="text" id="cvv" name="cvv" placeholder="CVV">
+                                </div>
+                                <input type="text" id="cardHolderName" name="cardHolderName" placeholder="Card Owner">
+                                <input type="text" id="billingAddress" name="billingAddress" placeholder="Billing Address">
+                                <input type="submit" value="Make Payment" id="submitBtn">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </footer>
+            </section>
+        </main>
+        <footer>
+            <div class="container">
+                <div class="footer-box">
+                    <div class="footer-img">
+                        <img src="./assets/home_forest_v03.svg" alt="">
+                    </div>
+                    <div class="social">
+                        <i class="bi bi-instagram"></i>
+                        <i class="bi bi-facebook"></i>
+                        <i class="bi bi-twitter"></i>
+                    </div>
+                    <div class="legal">
+                        <p class="iva">
+                            <a href="#">P.iva 34957100281</a>
+                        </p>
+                        <p class="cookies">
+                            <a href="#">Cookies/Privacy</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-        <script src="./js/header&hero.js"></script>
+        <!-- <script src="./js/header&hero.js"></script> -->
         <script src="./js/menu.js"></script>
-        <script src="dinamicsPlants.js"></script>
+        <script src="./js/dinamicsCart.js"></script>
     </body>
 </html>

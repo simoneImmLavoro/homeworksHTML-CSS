@@ -47,7 +47,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     height: 10vh;
     padding: 0.6rem 0;
     opacity: 0;
@@ -114,13 +114,13 @@ a {
     align-items: center;
     justify-content: center;
     z-index: 4;
-    transition: 1s ease-out;
+    transition: 0.6s ease-out;
 }
 
 .mobile-nav .main-nav {
     list-style: none;
     text-align: right;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .mobile-nav .main-nav li {
@@ -166,7 +166,12 @@ a {
 }
 
 .active{
+    font-size: 1.3rem;
     border-bottom: 1px solid #000;
+}
+
+.mobile-nav .active{
+    font-size: 2rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -183,7 +188,8 @@ a {
 
 #hero {
     background-image: url("../assets/marita-kavelashvili-ugnrXk1129g-unsplash.jpg");
-    background-position: center;
+    background-attachment: fixed;
+    background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
@@ -198,6 +204,7 @@ a {
     top: 40%;
     left: 50%;
     transform: translateX(-50%);
+    transition: 1.6s ease-in-out;
 }
 
 .main-title {
@@ -446,7 +453,7 @@ footer{
 }
 
 .footer-box{
-    height: 18vh;
+    height: 15vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -476,6 +483,10 @@ footer{
 
 .social i:hover{
     color: #1a1919;
+}
+
+.cookies{
+    margin-top: 0.3rem;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -625,7 +636,7 @@ footer{
     }
     
     .footer-img{
-        width: 10%;
+        width: 8%;
     }
     
     .utils-link{

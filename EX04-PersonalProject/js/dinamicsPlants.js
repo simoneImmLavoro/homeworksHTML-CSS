@@ -1,6 +1,10 @@
 let sliderPiece = document.querySelector(".slider-piece");
 let plantGallery = document.querySelector(".plant-gallery")
-let circleTag = document.querySelectorAll(".circle-tag")
+let circleTag = document.querySelectorAll(".circle-tag");
+let cartDesk = document.querySelector(".cart-nav-desktop");
+let cartSide = document.querySelector(".cart-nav-side");
+let cartMobile = document.querySelector(".cart-nav-mobile");
+let cartMainBtn = document.querySelector(".button-to-cart");
 
 
 let plantArchive = "http://localhost:3000/plants";
@@ -9,6 +13,13 @@ let interval = 1400;
 let forCart = [];
 
 sliderPiece.setAttribute("src", "https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.l.040-1_1.jpg&w=640&q=80");
+
+window.addEventListener('DOMContentLoaded', function(){
+    forCart = takeItems()
+    if(forCart == null){
+        forCart = [];
+    }
+})
 
 
 fetch(plantArchive)
@@ -21,6 +32,9 @@ fetch(plantArchive)
             createPlantCard(plant);
         });
         setInterval(randomizeSliderPlants, interval);
+    })
+    .finally(function(){
+        cartNumberTag()
     })
 
     let lastRandomIndex = -1;
@@ -68,9 +82,10 @@ function createPlantCard(plant){
     plantAmount.setAttribute("class", "p-amount")
     plantDescr.setAttribute("class", "p-descr")
     plantButtonDiv.setAttribute("class", "p-button-div")
-    plantButtonCta.setAttribute("class", "p-cta add")
     plantAlert.setAttribute("class", "p-alert")
+    plantButtonCta.setAttribute("class", "p-cta add")
 
+    
     plantName.textContent = plant.nome;
     plantFamily.textContent = plant.family;
     plantPrice.textContent = "Price: €";
@@ -78,6 +93,18 @@ function createPlantCard(plant){
     plantDescr.textContent = plant.shortDescr;
     plantButtonCta.textContent = "Add to Cart";
     plantAlert.textContent = "Element added!"
+
+    for(let i = 0; i < forCart.length; i++){
+        forCart[i]
+        if(plant.id == forCart[i]){
+            if(plantButtonCta.classList.contains("add")){
+                plantAlert.style.visibility = "visible";
+                plantButtonCta.classList.remove("add");
+                plantButtonCta.classList.add("remove");
+                plantButtonCta.textContent = "Remove item";
+            }
+        }
+    }
 
     plantButtonCta.addEventListener("click", function(){
         if(plantButtonCta.classList.contains("add")){
@@ -95,7 +122,6 @@ function createPlantCard(plant){
             forCart = forCart.filter(id => id !== plant.id)
         }
 
-        console.log(forCart.length); 
         cartNumberTag()
     })
     
@@ -131,3 +157,29 @@ function cartNumberTag(){
         }
     })
 }
+
+function saveItems(){
+    let forCartJSON = JSON.stringify(forCart);
+    localStorage.setItem("userCart", forCartJSON)
+}
+
+function takeItems(){
+    let importedCartJSON = localStorage.getItem("userCart")
+    let importedCartOBJ = JSON.parse(importedCartJSON)
+    return importedCartOBJ
+}
+
+
+cartDesk.addEventListener("click", saveItems);
+cartSide.addEventListener("click", saveItems);
+
+cartMobile.addEventListener("click", function(){
+    saveItems();
+    window.location.href = "./cart.html";
+});
+
+cartMainBtn.addEventListener("click", function(){
+    saveItems();
+    window.location.href = "./cart.html";   
+});
+
