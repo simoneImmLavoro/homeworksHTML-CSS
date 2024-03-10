@@ -165,12 +165,12 @@ a {
     left: 90%;
 }
 
-.active{
+.active {
     font-size: 1.3rem;
     border-bottom: 1px solid #000;
 }
 
-.mobile-nav .active{
+.mobile-nav .active {
     font-size: 2rem;
 }
 
@@ -446,13 +446,13 @@ blockquote {
 /*                                   footer                                   */
 /* -------------------------------------------------------------------------- */
 
-footer{
+footer {
     background-color: rgb(110, 146, 122);
     padding: 1rem 0;
     color: #3c3c3c;
 }
 
-.footer-box{
+.footer-box {
     height: 15vh;
     display: flex;
     justify-content: center;
@@ -460,33 +460,37 @@ footer{
     gap: 1.5rem;
 }
 
-.footer-img{
+.footer-img {
     width: 20%;
 }
 
-.utils-link{
+.utils-link {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
 }
 
-.social{
+.social {
     display: flex;
     gap: 0.8rem;
     font-size: 1.3rem;
 }
 
-.social i{
+.social i {
     cursor: pointer;
 }
 
-.social i:hover{
+.social i:hover {
     color: #1a1919;
 }
 
-.cookies{
+.cookies {
     margin-top: 0.3rem;
+}
+
+.copy-p {
+    text-align: center;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -603,50 +607,50 @@ footer{
         justify-content: space-between;
     }
 
-/* main cta button  */
+    /* main cta button  */
 
-    .cta-main-button{
+    .cta-main-button {
         width: 45%;
     }
 
-/* quote area  */
+    /* quote area  */
 
-    .quote-area{
+    .quote-area {
         padding: 5rem 0;
     }
 
-    blockquote{
+    blockquote {
         width: 60%;
         font-size: 1.3rem;
         margin: 0 auto 1.2rem;
     }
 
-    .author{
+    .author {
         width: 60%;
         font-size: 1.1rem;
     }
 
     /* footer */
-  
-    .footer-box{
+
+    .footer-box {
         height: 15vh;
         display: flex;
         justify-content: space-between;
         align-items: center;
     }
-    
-    .footer-img{
+
+    .footer-img {
         width: 8%;
     }
-    
-    .utils-link{
+
+    .utils-link {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
     }
-    
-    .social{
+
+    .social {
         display: flex;
         gap: 0.8rem;
         font-size: 1.3rem;
