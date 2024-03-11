@@ -161,10 +161,17 @@ function createCartItem(plant, counter) {
 function alertEmptyCart(){
     let alertDiv = document.createElement("div")
     let alertMessage = document.createElement("p")
+    let alertLinkSpan = document.createElement("span")
+    let alertLink = document.createElement("a")
 
     alertDiv.setAttribute("class", "alert-empty")
-    alertMessage.textContent = "You Cart is Empty, please return to the Main Page!"
+    alertLink.setAttribute("href", "./index.html")
+    alertMessage.textContent = "You Cart is Empty, please return to the "
+    alertLink.textContent = "Main Page!"
+    alertLink.style.borderBottom ="2px solid #00000096"
 
+    alertLinkSpan.appendChild(alertLink)
+    alertMessage.appendChild(alertLinkSpan)
     alertDiv.appendChild(alertMessage)
     itemsList.appendChild(alertDiv)
 }
