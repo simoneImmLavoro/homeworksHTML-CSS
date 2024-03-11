@@ -12,7 +12,7 @@ let plantImgs = [];
 let interval = 1400;
 let forCart = [];
 
-sliderPiece.setAttribute("src", "https://plnts.com/_next/image?url=https%3A%2F%2Fwebshop.plnts.com%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2Faa5d334f459227518b6c3cf7ea9d29ed%2Fp%2Fl%2Fpl.l.040-1_1.jpg&w=640&q=80");
+sliderPiece.setAttribute("src", "../assets/plants-photo/Serpens.avif");
 
 window.addEventListener('DOMContentLoaded', function(){
     forCart = takeItems()
@@ -95,7 +95,7 @@ function createPlantCard(plant){
     plantAlert.textContent = "Element added!"
 
     for(let i = 0; i < forCart.length; i++){
-        forCart[i]
+        // forCart[i]
         if(plant.id == forCart[i]){
             if(plantButtonCta.classList.contains("add")){
                 plantAlert.style.visibility = "visible";
